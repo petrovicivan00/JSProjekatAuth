@@ -11,7 +11,7 @@ app.use(cors());
 
 app.use("/auth", authRoute);
 
-mongoose.connect('mongodb://localhost:27017/MyMovies')
+mongoose.connect(process.env.MONGO)
         .then(() => console.log("DB Connection Successfull"))
         .catch(err => console.log(err));
 
