@@ -12,7 +12,7 @@ app.use(cors());
 app.use("/auth", authRoute);
 
 mongoose.connect(process.env.MONGO)
-        .then(() => console.log("DB Connection Successfull"))
+        .then(() => console.log("DB Connection Successfull!"))
         .catch(err => console.log(err));
 
 app.listen( process.env.PORT || 2000, () => {
