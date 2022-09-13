@@ -11,10 +11,10 @@ app.use(cors());
 
 app.use("/auth", authRoute);
 
-mongoose.connect(process.env.MONGO)
+mongoose.connect('mongodb://localhost:27017/MyMovies')
         .then(() => console.log("DB Connection Successfull"))
         .catch(err => console.log(err));
 
-app.listen( process.env.PORT | 2000, () => {
+app.listen( process.env.PORT || 2000, () => {
     console.log("Backend server is running on port " + process.env.PORT);
 });
